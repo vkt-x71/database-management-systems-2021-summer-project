@@ -1,0 +1,45 @@
+﻿using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LibraryManagement.Win.Models
+{
+    public class LibraryContext : DbContext
+    {
+        public DbSet<TbAction> TbAction { get; set; }
+        public DbSet<TbBook> TbBook { get; set; }
+        public DbSet<TbMagazine> TbMagazine { get; set; }
+        public DbSet<TbManager> TbManager { get; set; }
+        public DbSet<TbManager> TbMember { get; set; }
+        public DbSet<TbPenalty> TbPenalty { get; set; }
+        public DbSet<TbPerson> TbPerson { get; set; }
+        public DbSet<TbPublication> TbPublication { get; set; }
+        public DbSet<TbPublicationType> TbPublicationType { get; set; }
+        public DbSet<TbPublishHome> TbPublishHome { get; set; }
+        public DbSet<TbRole> TbRole { get; set; }
+        public DbSet<TbSettings> TbSettigs { get; set; }
+        public DbSet<TbWriter> TbWriter { get; set; }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            
+            /*optionsBuilder.UseNpgsql("Host=localhost;Database=library;Username=postgres;Password=ydeC001a");
+            */
+            
+            optionsBuilder.UseSqlServer(@"Data Source=localhost\sqlexpress;Initial Catalog=library;Integrated Security=True;Pooling=False");
+
+
+
+
+        }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            
+
+        }
+
+
+    }
+}
