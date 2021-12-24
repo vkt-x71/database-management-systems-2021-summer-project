@@ -13,6 +13,7 @@ namespace LibraryManagement.Win
 {
     public partial class FrmYazarlar : Form
     {
+        int bookcount, magazinecount, publicationcount, writercount = 0;
         libraryContext context;
         int id = 0;
         public FrmYazarlar()
@@ -34,9 +35,18 @@ namespace LibraryManagement.Win
 
         private void BtnEdit_Click(object sender, EventArgs e)
         {
-            Tbwriter writer = context.Tbwriter.Find(id);
-            writer.Person.Name = dataGridView1.SelectedRows[0].Cells["name"].Value.ToString();
-            writer.Person.Surname = dataGridView1.SelectedRows[0].Cells["surname"].Value.ToString();
+            Tbwriter writer = (from s in context.Tbwriter
+                               where s.Id == id
+                               select new Tbwriter
+                               {
+                                   Id = s.Id,
+                                   Biography = s.Biography,
+                                   Person = s.Person,
+                                   PersonId = s.PersonId,
+                                   Tbbookwriter = s.Tbbookwriter
+                               }).FirstOrDefault();
+            writer.Person.Name = txtAd.Text;
+            writer.Person.Surname = txtSoyad.Text;
             context.SaveChanges();
             veriGetir();
         }
@@ -46,18 +56,20 @@ namespace LibraryManagement.Win
             Tbwriter writer = context.Tbwriter.Find(id);
             context.Tbwriter.Remove(writer);
             context.SaveChanges();
+            context = new libraryContext();
             id = 0;
             txtAd.Clear();
             txtSoyad.Clear();
             richTextBox1.Clear();
             veriGetir();
+            bilgiGuncelle();
         }
 
         private void DataGridView1_SelectionChanged(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count < 1)
                 return;
-            id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["id"].Value);
+            id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
             txtAd.Text = dataGridView1.SelectedRows[0].Cells["name"].Value.ToString();
             txtSoyad.Text = dataGridView1.SelectedRows[0].Cells["surname"].Value.ToString();
 
@@ -65,16 +77,17 @@ namespace LibraryManagement.Win
 
         private void BtnAddNew_Click(object sender, EventArgs e)
         {
-            if(btnAddNew.Text.Contains("Yeni"))
+            if (btnAddNew.Text.Contains("Yeni"))
             {
                 id = 0;
                 btnAddNew.Text = "Ekle";
                 txtAd.Clear();
                 txtSoyad.Clear();
                 richTextBox1.Clear();
-            } else
+            }
+            else
             {
-                if(txtAd.Text.Trim() == "" || txtSoyad.Text.Trim() == "")
+                if (txtAd.Text.Trim() == "" || txtSoyad.Text.Trim() == "")
                 {
                     MessageBox.Show("Ad Soyad Bilgisi Eksik");
                     return;
@@ -92,15 +105,28 @@ namespace LibraryManagement.Win
 
                 context.Tbwriter.Add(writer);
                 context.SaveChanges();
+                context = new libraryContext();
                 btnAddNew.Text = "Yeni Kayıt";
                 veriGetir();
+                bilgiGuncelle();
                 id = writer.Id;
             }
         }
 
         private void FrmYazarlar_Load(object sender, EventArgs e)
         {
+
+
             veriGetir();
+            bilgiGuncelle();
+        }
+        void bilgiGuncelle()
+        {
+            Tbsettings set = context.Tbsettings.First();
+            lblInfo.Text = "Yazar Sayısı: " + set.WriterCount;
+            lblInfo.Text += "\n Yayın Sayısı: " + set.PublicationCount;
+            lblInfo.Text += "\n Kitap Sayısı: " + set.BookCount;
+            lblInfo.Text += "\n Dergi Sayısı: " + set.MagazineCount;
         }
         void veriGetir()
         {
@@ -125,7 +151,7 @@ namespace LibraryManagement.Win
                             s.Person.Surname,
                             s.Biography,
                         }).ToList();
-            data = data.Where(x => x.Name.Contains(key) || x.Surname.Contains(key)).ToList();
+            data = data.Where(x => x.Name.ToLower().Contains(key) || x.Surname.ToLower().Contains(key)).ToList();
 
             dataGridView1.DataSource = data;
         }

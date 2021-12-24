@@ -41,117 +41,150 @@ namespace LibraryManagement.Win
             this.btnAddNew = new System.Windows.Forms.Button();
             this.txtAra = new System.Windows.Forms.TextBox();
             this.btnAra = new System.Windows.Forms.Button();
+            this.lblInfo = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 333);
+            this.dataGridView1.Location = new System.Drawing.Point(11, 280);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 33;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(918, 225);
+            this.dataGridView1.Size = new System.Drawing.Size(826, 189);
             this.dataGridView1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 105);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(11, 88);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 25);
+            this.label1.Size = new System.Drawing.Size(33, 21);
             this.label1.TabIndex = 1;
             this.label1.Text = "Adı";
             // 
             // txtAd
             // 
-            this.txtAd.Location = new System.Drawing.Point(91, 99);
+            this.txtAd.BackColor = System.Drawing.Color.Black;
+            this.txtAd.ForeColor = System.Drawing.Color.White;
+            this.txtAd.Location = new System.Drawing.Point(95, 85);
             this.txtAd.Name = "txtAd";
-            this.txtAd.Size = new System.Drawing.Size(237, 31);
+            this.txtAd.Size = new System.Drawing.Size(214, 29);
             this.txtAd.TabIndex = 2;
             // 
             // txtSoyad
             // 
-            this.txtSoyad.Location = new System.Drawing.Point(106, 153);
+            this.txtSoyad.BackColor = System.Drawing.Color.Black;
+            this.txtSoyad.ForeColor = System.Drawing.Color.White;
+            this.txtSoyad.Location = new System.Drawing.Point(95, 129);
             this.txtSoyad.Name = "txtSoyad";
-            this.txtSoyad.Size = new System.Drawing.Size(237, 31);
+            this.txtSoyad.Size = new System.Drawing.Size(214, 29);
             this.txtSoyad.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 159);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(15, 134);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 25);
+            this.label2.Size = new System.Drawing.Size(53, 21);
             this.label2.TabIndex = 3;
             this.label2.Text = "Soyad";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 207);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(11, 174);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 25);
+            this.label3.Size = new System.Drawing.Size(54, 21);
             this.label3.TabIndex = 5;
             this.label3.Text = "Hayatı";
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(106, 207);
+            this.richTextBox1.BackColor = System.Drawing.Color.Black;
+            this.richTextBox1.ForeColor = System.Drawing.Color.White;
+            this.richTextBox1.Location = new System.Drawing.Point(95, 174);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(824, 92);
+            this.richTextBox1.Size = new System.Drawing.Size(620, 78);
             this.richTextBox1.TabIndex = 6;
             this.richTextBox1.Text = "";
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(818, 283);
+            this.btnDelete.BackColor = System.Drawing.Color.Black;
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(736, 238);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(112, 34);
+            this.btnDelete.Size = new System.Drawing.Size(101, 29);
             this.btnDelete.TabIndex = 7;
             this.btnDelete.Text = "Sil";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(818, 243);
+            this.btnEdit.BackColor = System.Drawing.Color.Black;
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.Location = new System.Drawing.Point(736, 204);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(112, 34);
+            this.btnEdit.Size = new System.Drawing.Size(101, 29);
             this.btnEdit.TabIndex = 8;
             this.btnEdit.Text = "Düzenle";
-            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.UseVisualStyleBackColor = false;
             // 
             // btnAddNew
             // 
-            this.btnAddNew.Location = new System.Drawing.Point(818, 198);
+            this.btnAddNew.BackColor = System.Drawing.Color.Black;
+            this.btnAddNew.ForeColor = System.Drawing.Color.White;
+            this.btnAddNew.Location = new System.Drawing.Point(736, 166);
             this.btnAddNew.Name = "btnAddNew";
-            this.btnAddNew.Size = new System.Drawing.Size(112, 34);
+            this.btnAddNew.Size = new System.Drawing.Size(101, 29);
             this.btnAddNew.TabIndex = 9;
             this.btnAddNew.Text = "Yeni Kayıt";
-            this.btnAddNew.UseVisualStyleBackColor = true;
+            this.btnAddNew.UseVisualStyleBackColor = false;
             // 
             // txtAra
             // 
-            this.txtAra.Location = new System.Drawing.Point(557, 30);
+            this.txtAra.BackColor = System.Drawing.Color.Black;
+            this.txtAra.ForeColor = System.Drawing.Color.White;
+            this.txtAra.Location = new System.Drawing.Point(501, 25);
             this.txtAra.Name = "txtAra";
-            this.txtAra.Size = new System.Drawing.Size(237, 31);
+            this.txtAra.Size = new System.Drawing.Size(214, 29);
             this.txtAra.TabIndex = 10;
             // 
             // btnAra
             // 
-            this.btnAra.Location = new System.Drawing.Point(818, 27);
+            this.btnAra.BackColor = System.Drawing.Color.Black;
+            this.btnAra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAra.ForeColor = System.Drawing.Color.White;
+            this.btnAra.Location = new System.Drawing.Point(736, 23);
             this.btnAra.Name = "btnAra";
-            this.btnAra.Size = new System.Drawing.Size(112, 34);
+            this.btnAra.Size = new System.Drawing.Size(101, 29);
             this.btnAra.TabIndex = 11;
             this.btnAra.Text = "Ara";
-            this.btnAra.UseVisualStyleBackColor = true;
+            this.btnAra.UseVisualStyleBackColor = false;
+            // 
+            // lblInfo
+            // 
+            this.lblInfo.BackColor = System.Drawing.Color.Black;
+            this.lblInfo.ForeColor = System.Drawing.Color.White;
+            this.lblInfo.Location = new System.Drawing.Point(843, 280);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(226, 187);
+            this.lblInfo.TabIndex = 12;
+            this.lblInfo.Text = "";
             // 
             // FrmYazarlar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(958, 570);
+            this.BackColor = System.Drawing.SystemColors.Desktop;
+            this.ClientSize = new System.Drawing.Size(1086, 479);
+            this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.btnAra);
             this.Controls.Add(this.txtAra);
             this.Controls.Add(this.btnAddNew);
@@ -186,5 +219,6 @@ namespace LibraryManagement.Win
         private System.Windows.Forms.Button btnAddNew;
         private System.Windows.Forms.TextBox txtAra;
         private System.Windows.Forms.Button btnAra;
+        private System.Windows.Forms.RichTextBox lblInfo;
     }
 }

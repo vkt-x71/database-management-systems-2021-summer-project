@@ -3,15 +3,17 @@ using System;
 using LibraryManagement.Win.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace LibraryManagement.Win.Migrations
 {
     [DbContext(typeof(libraryContext))]
-    partial class libraryContextModelSnapshot : ModelSnapshot
+    [Migration("20211130211243_add_count_column")]
+    partial class add_count_column
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

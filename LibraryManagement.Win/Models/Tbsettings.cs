@@ -9,6 +9,8 @@ namespace LibraryManagement.Win.Models
         public int ReadDayLimit { get; set; }
         public string LibraryName { get; set; }
         public int PublicationCount { get; set; }
+        public int MagazineCount { get; set; }
+        public int BookCount { get; set; }
         public int WriterCount { get; set; }
     }
 }

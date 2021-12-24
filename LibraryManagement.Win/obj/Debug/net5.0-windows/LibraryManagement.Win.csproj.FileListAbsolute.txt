@@ -41,7 +41,6 @@ D:\Projects\App\database-management-systems-2021-summer-project\LibraryManagemen
 D:\Projects\App\database-management-systems-2021-summer-project\LibraryManagement.Win\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
 D:\Projects\App\database-management-systems-2021-summer-project\LibraryManagement.Win\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\Projects\App\database-management-systems-2021-summer-project\LibraryManagement.Win\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
-D:\Projects\App\database-management-systems-2021-summer-project\LibraryManagement.Win\obj\Debug\net5.0-windows\LibraryManagement.Win.csproj.CopyComplete
 D:\Projects\App\database-management-systems-2021-summer-project\LibraryManagement.Win\obj\Debug\net5.0-windows\LibraryManagement.Win.dll
 D:\Projects\App\database-management-systems-2021-summer-project\LibraryManagement.Win\obj\Debug\net5.0-windows\ref\LibraryManagement.Win.dll
 D:\Projects\App\database-management-systems-2021-summer-project\LibraryManagement.Win\obj\Debug\net5.0-windows\LibraryManagement.Win.pdb
